@@ -38,7 +38,7 @@ export function ImageWithLink({
         </figcaption>
         <img
           alt={altText}
-          src={source}
+          src={source as string}
           className='h-full w-full object-cover group-hover:scale-110 transition-transform'
         />
 
