@@ -45,8 +45,8 @@ export const projects: ProjectInfo[] = [
       </>
     ),
     preview: portfolioPreview,
-    githubUrl: 'http://localhost:3000/',
-    liveUrl: 'http://localhost:3000/',
+    githubUrl: 'https://github.com/amateratsoo/portfolio',
+    liveUrl: 'https://jossanidacruz.vercel.app',
     technologies: [
       { icon: reactLogo, name: 'React' },
       { icon: typescriptLogo, name: 'Typescript' },

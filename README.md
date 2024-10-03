@@ -2,7 +2,7 @@
 
 ### This is the repository for my portfolio and personal website, feel free to pay a visit and sign my guestbook 🤩✨
 
-<a href='' target='_blank'  style='background-color: #3b82f6; color: #f5f5f5; padding: 4px 8px; border-radius: 8px; font-weight: 500; cursor: pointer; text-decoration: none;'>See it live 🚀</a>
+<a href='https://jossanidacruz.vercel.app' target='_blank'  style='background-color: #3b82f6; color: #f5f5f5; padding: 4px 8px; border-radius: 8px; font-weight: 500; cursor: pointer; text-decoration: none;'>See it live 🚀</a>
 
 🪄 This website was built using:
 
