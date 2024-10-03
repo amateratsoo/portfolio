@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  directUrl         = env("DIRECT_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  // supabase only allows to delete rows with a primary key
+  // this filed is not necessary nor used aplication wise
+  id     String @id @default(uuid())
+  email  String @unique
+  name   String
+  avatar String
+
+  comment       Comment[]
+  likedComments UserLikedComments[]
+
+  @@map("user")
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  text      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  author      User   @relation(fields: [authorEmail], references: [email])
+  authorEmail String @map("author_email")
+
+  likedByUser UserLikedComments[]
+
+  @@map("comment")
+}
+
+model UserLikedComments {
+  commentId String  @map("comment_id")
+  userEmail String  @map("user_email")
+  comment   Comment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  user      User    @relation(fields: [userEmail], references: [email])
+
+  @@id([commentId, userEmail])
+  @@map("user_liked_comments")
+}
