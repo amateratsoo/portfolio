@@ -8,7 +8,7 @@ import { UserInfo } from '@/components/guestbook/form/user-info'
 
 import { getAllComments, postComment } from '@/actions'
 import { LikeButton } from '@/components/guestbook/comment/like-button'
-import { prisma } from '@/lib/prisma'
+// import { prisma } from '@/lib/prisma'
 
 export default async function Page() {
   const session = await auth()

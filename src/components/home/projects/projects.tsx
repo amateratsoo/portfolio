@@ -70,6 +70,8 @@ export function Projects() {
     function updatePointerCoords(event: PointerEvent) {
       const { clientX: x, clientY: y } = event
 
+      if (!sectionRef.current) return
+
       setPointerCoords({
         x:
           x -

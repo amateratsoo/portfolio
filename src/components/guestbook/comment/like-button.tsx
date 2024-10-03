@@ -1,7 +1,7 @@
 'use client'
 
 import { useOptimistic } from 'react'
-import JSConfetti from 'js-confetti'
+// import JSConfetti from 'js-confetti'
 import { Heart } from 'lucide-react'
 import { motion } from 'framer-motion'
 
