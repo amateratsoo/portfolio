@@ -40,7 +40,7 @@ export function LikeButton({
       }
     )
 
-  const jsCofetti = new JSConfetti()
+  // const jsCofetti = new JSConfetti()
 
   const userAlreadyLiked = optimisticEmailOfUsersThatLiked.includes(
     session?.user?.email as string
@@ -78,9 +78,6 @@ export function LikeButton({
           //   emojis: ['🤩', '✨', '🚀', '🥳', '🎉', '👏'],
           //   emojiSize: 38
           // })
-
-          setShowAnimation(true)
-          setTimeout(() => setShowAnimation(false), 1200)
 
           await likeComment({
             commentId,
