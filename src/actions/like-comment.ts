@@ -21,14 +21,14 @@ export async function likeComment({
     }
   })
 
-  if (!session) return
+  if (!session || !session.user) return
 
   if (!user) {
     await prisma.user.create({
       data: {
-        avatar: session?.user?.image,
-        name: session?.user?.name,
-        email: session?.user?.email
+        avatar: session?.user?.image as string,
+        name: session?.user?.name as string,
+        email: session?.user?.email as string
       }
     })
   }

@@ -37,7 +37,7 @@ export async function postComment(data: FormData) {
           }
         }
       },
-      text: comment
+      text: comment as string
     }
   })
 
