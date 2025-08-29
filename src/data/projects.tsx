@@ -10,6 +10,7 @@ import figmaLogo from '@/assets/svg/icons/figma-no-bg.svg'
 import portfolioPreview from '@/assets/projects-preview/portfolio-preview.png'
 import spaceTourismPreview from '@/assets/projects-preview/space-tourism-preview.png'
 import eWalletFractalPreview from '@/assets/projects-preview/e-wallet-fractal-preview.png'
+import jnPreview from '@/assets/projects-preview/jn-preview.png'
 
 interface Technologies {
   icon: string | StaticImport
@@ -80,20 +81,22 @@ export const projects: ProjectInfo[] = [
     ]
   },
   {
-    title: 'More soon',
+    title: 'Jussela Nascimento',
     description: (
       <>
         <p>
-          Right now I&apos;m busy with college and some personal projects, but i
-          will add more projects here very soon.
+          Professional tailored landing page with smooth animations and creative
+          page layouts using only css. It uses microservices to handle real time
+          meetings and appointments.
         </p>
-
-        <br />
-
-        <p>Stay tuned 🥳</p>
       </>
     ),
-    preview: eWalletFractalPreview,
-    technologies: []
+    preview: jnPreview,
+    githubUrl: `${baseGithubUrl}/jn`,
+    liveUrl: 'https://jnascimento.vercel.app/',
+    technologies: [
+      { icon: reactLogo, name: 'React' },
+      { icon: tailwindcssLogo, name: 'Tailwindcss' }
+    ]
   }
 ]
